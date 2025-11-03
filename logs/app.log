@@ -1,0 +1,7 @@
+[2025-11-03 14:30:20] [INFO] [IP: ::1] [User: guest] Authentication register: sk - SUCCESS
+[2025-11-03 14:32:46] [INFO] [IP: ::1] [User: sk] Authentication login: sk - SUCCESS
+[2025-11-03 14:33:06] [INFO] [IP: ::1] [User: guest] Authentication logout: sk - SUCCESS
+[2025-11-03 14:35:13] [INFO] [IP: ::1] [User: guest] Authentication register: skk - SUCCESS
+[2025-11-03 14:35:30] [INFO] [IP: ::1] [User: guest] Authentication register: skks - SUCCESS
+[2025-11-03 14:36:44] [INFO] [IP: ::1] [User: guest] Authentication register: asdasd - SUCCESS
+[2025-11-03 14:37:07] [INFO] [IP: ::1] [User: sk] Authentication login: sk - SUCCESS

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -51,98 +52,284 @@
       margin-top: 5.2rem;
     }
 
-    h2 { text-align: center; color: #0f5132; font-weight: 600; margin-bottom: 1.5rem; }
+    h2 {
+      text-align: center;
+      color: #0f5132;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
 
-    label { display: block; margin-top: 1rem; font-weight: 600; color: #1e3d29; }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+      color: #1e3d29;
+    }
 
-    input, select, button {
-      width: 100%; padding: 0.7rem; margin-top: 0.4rem;
-      border-radius: 8px; border: 1px solid #cde3d6;
-      background-color: #f9fffb; color: #0f5132;
+    input,
+    select,
+    button {
+      width: 100%;
+      padding: 0.7rem;
+      margin-top: 0.4rem;
+      border-radius: 8px;
+      border: 1px solid #cde3d6;
+      background-color: #f9fffb;
+      color: #0f5132;
       box-sizing: border-box;
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
-    input:focus, select:focus {
-      outline: none; border-color: #198754; box-shadow: 0 0 6px rgba(25, 135, 84, 0.3);
+    input:focus,
+    select:focus {
+      outline: none;
+      border-color: #198754;
+      box-shadow: 0 0 6px rgba(25, 135, 84, 0.3);
     }
 
     button {
-      margin-top: 1.2rem; padding: 0.8rem; border-radius: 8px; border: none;
-      background-color: #198754; color: #ffffff; font-size: 1rem;
-      font-weight: bold; cursor: pointer;
+      margin-top: 1.2rem;
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: none;
+      background-color: #198754;
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
       transition: background-color 0.2s ease, transform 0.1s ease;
     }
 
-    button:hover { background-color: #157347; transform: translateY(-1px); }
+    button:hover {
+      background-color: #157347;
+      transform: translateY(-1px);
+    }
 
-    .btn-outline { background-color: #ffffff; border: 2px solid #198754; color: #198754; }
-    .btn-outline:hover { background-color: #198754; color: #ffffff; }
+    .btn-outline {
+      background-color: #ffffff;
+      border: 2px solid #198754;
+      color: #198754;
+    }
 
-    .toggle { text-align: center; margin-top: 1rem; font-size: 0.9rem; color: #198754; }
-    .toggle span { color: #0b5836; cursor: pointer; font-weight: bold; text-decoration: underline; }
-    .toggle span:hover { color: #157347; }
+    .btn-outline:hover {
+      background-color: #198754;
+      color: #ffffff;
+    }
 
-    .password-wrapper { position: relative; display: flex; align-items: center; }
-    .password-wrapper input { padding-right: 2rem; }
+    .toggle {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #198754;
+    }
+
+    .toggle span {
+      color: #0b5836;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .toggle span:hover {
+      color: #157347;
+    }
+
+    .password-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .password-wrapper input {
+      padding-right: 2rem;
+    }
 
     .toggle-password {
-      position: absolute; right: 6px; background: transparent; border: none;
-      color: #555; font-size: 12px; cursor: pointer; padding: 2px; width: 22px; height: 22px;
-      display: flex; align-items: center; justify-content: center; border-radius: 50%;
+      position: absolute;
+      right: 6px;
+      background: transparent;
+      border: none;
+      color: #555;
+      font-size: 12px;
+      cursor: pointer;
+      padding: 2px;
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
       transition: color 0.2s ease, background-color 0.2s ease;
     }
-    .toggle-password:hover { color: #198754; background-color: #ecf9f0; }
 
-    .terms { text-align: center; font-size: 0.8rem; color: #6b6b6b; margin-top: 1rem; }
-    .terms a { color: #198754; text-decoration: none; }
-    .terms a:hover { text-decoration: underline; }
-
-    @keyframes fadeIn { from {opacity:0;transform:translateY(-10px);} to {opacity:1;transform:translateY(0);} }
-
-    #mainPage { display: none; width: 100%; min-height: 100vh; background-color: #f5fff7; color: #0f5132; padding-top: 4.6rem; }
-
-    main {
-      margin: 2rem auto; max-width: 600px; background: #ffffff;
-      padding: 2rem; border-radius: 12px;
-      box-shadow: 0 0 12px rgba(0, 128, 85, 0.1); text-align: center;
+    .toggle-password:hover {
+      color: #198754;
+      background-color: #ecf9f0;
     }
 
-    #mapContainer { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #f8fff9; z-index: 100; }
-    #map { width: 100%; height: 100%; }
+    .terms {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #6b6b6b;
+      margin-top: 1rem;
+    }
+
+    .terms a {
+      color: #198754;
+      text-decoration: none;
+    }
+
+    .terms a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #mainPage {
+      display: none;
+      width: 100%;
+      min-height: 100vh;
+      background-color: #f5fff7;
+      color: #0f5132;
+      padding-top: 4.6rem;
+    }
+
+    main {
+      margin: 2rem auto;
+      max-width: 600px;
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 128, 85, 0.1);
+      text-align: center;
+    }
+
+    #mapContainer {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #f8fff9;
+      z-index: 100;
+    }
+
+    #map {
+      width: 100%;
+      height: 100%;
+    }
 
     #backBtn {
-      position: absolute; bottom: 20px; left: 20px;
-      background-color: #198754; color: #fff; border: none;
-      width: 55px; height: 55px; border-radius: 50%; cursor: pointer;
-      font-size: 1.5rem; font-weight: bold;
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background-color: #198754;
+      color: #fff;
+      border: none;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.5rem;
+      font-weight: bold;
       box-shadow: 0 0 10px rgba(25, 135, 84, 0.3);
       z-index: 1000;
       transition: background-color 0.2s ease, transform 0.1s ease;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    #backBtn:hover { background-color: #157347; transform: scale(1.08); }
+
+    #backBtn:hover {
+      background-color: #157347;
+      transform: scale(1.08);
+    }
 
     #sideLegend {
-      position: fixed; top: 40%; left: 10px;
-      background: #ffffff; border-radius: 0 12px 12px 0;
-      box-shadow: 0 0 10px rgba(25,135,84,0.2);
-      overflow: hidden; display: none; transition: width 0.3s ease;
-      z-index: 150; width: 40px;
+      position: fixed;
+      top: 40%;
+      left: 10px;
+      background: #ffffff;
+      border-radius: 0 12px 12px 0;
+      box-shadow: 0 0 10px rgba(25, 135, 84, 0.2);
+      overflow: hidden;
+      display: none;
+      transition: width 0.3s ease;
+      z-index: 150;
+      width: 40px;
     }
-    #sideLegend.expanded { width: 150px; }
-    #sideLegend .arrow { background: #198754; color: white; padding: 6px 10px; cursor: pointer; text-align: center; }
-    #sideLegend .side-colors { display: flex; flex-direction: column; align-items: flex-start; padding: 8px 12px; gap: 6px; }
-    #sideLegend .side-colors div { display: flex; align-items: center; gap: 6px; }
-    #sideLegend .label { font-size: 0.85rem; color: #198754; display: none; }
-    #sideLegend.expanded .label { display: inline; }
-    .color-box { width: 18px; height: 18px; border-radius: 4px; }
-    .red { background: #d32f2f; }
-    .orange { background: #f57c00; }
-    .yellow { background: #fbc02d; }
+
+    #sideLegend.expanded {
+      width: 150px;
+    }
+
+    #sideLegend .arrow {
+      background: #198754;
+      color: white;
+      padding: 6px 10px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    #sideLegend .side-colors {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 8px 12px;
+      gap: 6px;
+    }
+
+    #sideLegend .side-colors div {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    #sideLegend .label {
+      font-size: 0.85rem;
+      color: #198754;
+      display: none;
+    }
+
+    #sideLegend.expanded .label {
+      display: inline;
+    }
+
+    .color-box {
+      width: 18px;
+      height: 18px;
+      border-radius: 4px;
+    }
+
+    .red {
+      background: #d32f2f;
+    }
+
+    .orange {
+      background: #f57c00;
+    }
+
+    .yellow {
+      background: #fbc02d;
+    }
 
     /* Symptom checker styling */
-    .symptom-section { margin-top: 1.5rem; text-align: left; }
+    .symptom-section {
+      margin-top: 1.5rem;
+      text-align: left;
+    }
+
     .symptom-group {
       margin-bottom: 1rem;
       padding: 0.8rem 1rem;
@@ -150,11 +337,13 @@
       border-radius: 8px;
       border: 1px solid #d6f0e2;
     }
+
     .symptom-group strong {
       display: block;
       margin-bottom: 0.5rem;
       color: #0f5132;
     }
+
     .symptom-group label {
       display: flex;
       align-items: center;
@@ -163,328 +352,592 @@
       font-weight: normal;
       color: #1e3d29;
     }
+
     .symptom-group input[type="checkbox"] {
       width: 18px;
       height: 18px;
       accent-color: #198754;
     }
-    .symptom-result { margin-top: 1rem; font-weight: bold; text-align: center; }
+
+    .symptom-result {
+      margin-top: 1rem;
+      font-weight: bold;
+      text-align: center;
+    }
 
     /* Report table styling */
-    #reportSection { margin-top: 1rem; text-align: left; }
-    #reportSection h3 { text-align: center; color: #0f5132; margin-bottom: 0.4rem; }
+    #reportSection {
+      margin-top: 1rem;
+      text-align: left;
+    }
+
+    #reportSection h3 {
+      text-align: center;
+      color: #0f5132;
+      margin-bottom: 0.4rem;
+    }
+
     #reportTable {
-      width: 100%; border-collapse: collapse; margin-top: 0.5rem;
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.5rem;
       font-size: 0.95rem;
     }
-    #reportTable th, #reportTable td {
+
+    #reportTable th,
+    #reportTable td {
       border: 1px solid #cde3d6;
       padding: 8px;
       text-align: center;
     }
-    #reportTable th { background-color: #198754; color: #fff; }
-    #reportTable tbody tr:nth-child(even) { background-color: #f9fffb; }
-    .small-muted { font-size: 0.85rem; color: #6b6b6b; margin-top: 6px; }
+
+    #reportTable th {
+      background-color: #198754;
+      color: #fff;
+    }
+
+    #reportTable tbody tr:nth-child(even) {
+      background-color: #f9fffb;
+    }
+
+    .small-muted {
+      font-size: 0.85rem;
+      color: #6b6b6b;
+      margin-top: 6px;
+    }
   </style>
 </head>
+
 <body>
-<header>Disease Tracker</header>
+  <header>Disease Tracker</header>
 
-<!-- LOGIN / SIGNUP -->
-<div class="container" id="formContainer">
-  <div id="loginForm">
-    <h2>Welcome Back</h2>
-    <form onsubmit="handleLogin(event)">
-      <label>Username</label>
-      <input type="text" id="loginUsername" required />
-      <label>Password</label>
-      <div class="password-wrapper">
-        <input type="password" id="loginPassword" required minlength="8" />
-        <button type="button" class="toggle-password" onclick="toggleVisibility('loginPassword', this)">👁️</button>
-      </div>
-      <button type="submit">Log In</button>
-    </form>
-    <button class="btn-outline" onclick="continueAsGuest()">Continue as Guest</button>
-    <div class="toggle">Don’t have an account? <span onclick="showSignup()">Sign Up</span></div>
-    <p class="terms">By continuing, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
-  </div>
-
-  <div id="signupForm" style="display:none;">
-    <h2>Create Account</h2>
-    <form onsubmit="handleSignup(event)">
-      <label>Username</label>
-      <input type="text" id="signupUsername" required />
-      <label>Email</label>
-      <input type="email" id="signupEmail" required />
-      <label>Location</label>
-      <input type="text" id="signupLocation" required />
-      <label>Password</label>
-      <div class="password-wrapper">
-        <input type="password" id="password" minlength="8" required />
-        <button type="button" class="toggle-password" onclick="toggleVisibility('password', this)">👁️</button>
-      </div>
-      <label>Re-enter Password</label>
-      <div class="password-wrapper">
-        <input type="password" id="confirmPassword" minlength="8" required />
-        <button type="button" class="toggle-password" onclick="toggleVisibility('confirmPassword', this)">👁️</button>
-      </div>
-      <button type="submit">Create Account</button>
-    </form>
-    <div class="toggle">Already have an account? <span onclick="showLogin()">Log In</span></div>
-  </div>
-</div>
-
-<!-- MAIN PAGE -->
-<div id="mainPage">
-  <main>
-    <p>Enter your location and select a disease to view the NCR Disease Heat Map demo.</p>
-    <label>Select Disease:</label>
-    <select id="disease" onchange="updateSymptomChecker()">
-      <option value="dengue">Dengue</option>
-      <option value="lepto">Leptospirosis</option>
-      <option value="malaria">Malaria</option>
-    </select>
-
-    <div class="symptom-section" id="symptomChecker"></div>
-
-    <label>Location:</label>
-    <input type="text" id="location" placeholder="Enter your location" />
-
-    <!-- Report submit is added inside each symptom template (below the symptomResult) -->
-    <!-- REPORT TABLE VISIBLE ALWAYS -->
-    <div id="reportSection">
-      <h3>Submitted Reports</h3>
-      <div class="small-muted" style="text-align:center;">(Saved locally in your browser — shared across users on this browser)</div>
-      <table id="reportTable">
-        <thead>
-          <tr><th>Disease</th><th>Location</th><th>Date</th></tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+  <!-- LOGIN / SIGNUP -->
+  <div class="container" id="formContainer">
+    <div id="loginForm">
+      <h2>Welcome Back</h2>
+      <form onsubmit="handleLogin(event)">
+        <label>Username</label>
+        <input type="text" id="loginUsername" required />
+        <label>Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="loginPassword" required minlength="8" />
+          <button type="button" class="toggle-password" onclick="toggleVisibility('loginPassword', this)">👁️</button>
+        </div>
+        <button type="submit">Log In</button>
+      </form>
+      <button class="btn-outline" onclick="continueAsGuest()">Continue as Guest</button>
+      <div class="toggle">Don’t have an account? <span onclick="showSignup()">Sign Up</span></div>
+      <p class="terms">By continuing, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy
+          Policy</a>.</p>
     </div>
 
-    <button onclick="toggleMap()">View NCR Disease Heat Map (Demo)</button>
-    <div style="margin-top:12px;"><button onclick="logout()" style="background:#dc3545;">Log out</button></div>
-  </main>
-</div>
-
-<!-- MAP -->
-<div id="mapContainer">
-  <button id="backBtn" onclick="toggleMap()">⮜</button>
-  <div id="map"></div>
-  <div id="sideLegend">
-    <div class="arrow">&#9664;</div>
-    <div class="side-colors">
-      <div><span class="color-box red"></span><span class="label">Dengue</span></div>
-      <div><span class="color-box orange"></span><span class="label">Lepto</span></div>
-      <div><span class="color-box yellow"></span><span class="label">Malaria</span></div>
+    <div id="signupForm" style="display:none;">
+      <h2>Create Account</h2>
+      <form onsubmit="handleSignup(event)">
+        <label>Username</label>
+        <input type="text" id="signupUsername" required />
+        <label>Email</label>
+        <input type="email" id="signupEmail" required />
+        <label>Location</label>
+        <input type="text" id="signupLocation" required />
+        <label>Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" minlength="8" required />
+          <button type="button" class="toggle-password" onclick="toggleVisibility('password', this)">👁️</button>
+        </div>
+        <label>Re-enter Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="confirmPassword" minlength="8" required />
+          <button type="button" class="toggle-password" onclick="toggleVisibility('confirmPassword', this)">👁️</button>
+        </div>
+        <button type="submit">Create Account</button>
+      </form>
+      <div class="toggle">Already have an account? <span onclick="showLogin()">Log In</span></div>
     </div>
   </div>
-</div>
 
-<!-- SCRIPTS -->
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
-<script>
-function toggleVisibility(id, btn) {
-  const f = document.getElementById(id);
-  f.type = f.type === "password" ? "text" : "password";
-  btn.textContent = f.type === "password" ? "👁️" : "🙈";
-}
-function loadUsers(){try{return JSON.parse(localStorage.getItem('diseaseTrackerUsers')||'[]')}catch{return[]}}
-function saveUsers(u){localStorage.setItem('diseaseTrackerUsers',JSON.stringify(u))}
-function showSignup(){loginForm.style.display="none";signupForm.style.display="block";}
-function showLogin(){signupForm.style.display="none";loginForm.style.display="block";}
-function handleSignup(e){
-  e.preventDefault();
-  const username=signupUsername.value.trim(),email=signupEmail.value.trim(),loc=signupLocation.value.trim();
-  const pass=password.value,confirm=confirmPassword.value;
-  if(pass!==confirm){alert("Passwords do not match.");return;}
-  if(pass.length<8){alert("Password must be at least 8 characters.");return;}
-  let users=loadUsers();
-  if(users.find(u=>u.username.toLowerCase()===username.toLowerCase()))return alert("Username exists.");
-  users.push({username,password:pass,email,location:loc});
-  saveUsers(users);alert("Account created! Please log in.");signupForm.reset();showLogin();
-}
-function handleLogin(e){
-  e.preventDefault();
-  const username=loginUsername.value.trim(),pass=loginPassword.value;
-  const users=loadUsers();const found=users.find(u=>u.username===username&&u.password===pass);
-  if(!found)return alert("Invalid credentials.");openMain(found);
-}
-function continueAsGuest(){openMain({username:"Guest"});}
-function openMain(user){formContainer.style.display="none";mainPage.style.display="block";localStorage.setItem('diseaseTrackerCurrentUser',JSON.stringify(user));}
-function logout(){localStorage.removeItem('diseaseTrackerCurrentUser');mainPage.style.display="none";formContainer.style.display="block";showLogin();}
+  <!-- MAIN PAGE -->
+  <div id="mainPage">
+    <main>
+      <p>Enter your location and select a disease to view the NCR Disease Heat Map demo.</p>
+      <label>Select Disease:</label>
+      <select id="disease" onchange="updateSymptomChecker()">
+        <option value="dengue">Dengue</option>
+        <option value="lepto">Leptospirosis</option>
+        <option value="malaria">Malaria</option>
+      </select>
 
-/* ======= SYMPTOM CHECKERS ======= */
-function updateSymptomChecker(){
-  const disease=document.getElementById("disease").value;
-  const sc=document.getElementById("symptomChecker");
-  let html="";
-  if(disease==="dengue"){
-    html=`
-      <h3>Dengue Symptom Checker</h3>
-      <div class="symptom-group">
-        <strong>Common Symptoms:</strong>
-        <label><input type="checkbox" class="symptom" value="fever"> High fever (40°C / 104°F)</label>
-        <label><input type="checkbox" class="symptom" value="headache"> Severe headache (pain behind eyes)</label>
-        <label><input type="checkbox" class="symptom" value="body aches"> Muscle, joint, or bone pain</label>
-        <label><input type="checkbox" class="symptom" value="rash"> Skin rash</label>
-        <label><input type="checkbox" class="symptom" value="nausea"> Nausea or vomiting</label>
-        <label><input type="checkbox" class="symptom" value="swollen glands"> Swollen glands</label>
+      <div class="symptom-section" id="symptomChecker"></div>
+
+      <label>Location:</label>
+      <input type="text" id="location" placeholder="Enter your location" />
+
+      <!-- Report submit is added inside each symptom template (below the symptomResult) -->
+      <!-- REPORT TABLE VISIBLE ALWAYS -->
+      <div id="reportSection">
+        <h3>Submitted Reports</h3>
+        <div class="small-muted" style="text-align:center;">(Saved locally in your browser — shared across users on this
+          browser)</div>
+        <table id="reportTable">
+          <thead>
+            <tr>
+              <th>Disease</th>
+              <th>Location</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
       </div>
-      <div class="symptom-group">
-        <strong>Severe Symptoms:</strong>
-        <label><input type="checkbox" class="symptom severe" value="fatigue"> Fatigue / restlessness</label>
-        <label><input type="checkbox" class="symptom severe" value="bleeding"> Bleeding gums / nosebleeds</label>
-        <label><input type="checkbox" class="symptom severe" value="abdominal pain"> Severe abdominal pain</label>
-        <label><input type="checkbox" class="symptom severe" value="vomiting blood"> Vomiting blood / blood in stool</label>
-        <label><input type="checkbox" class="symptom severe" value="rapid breathing"> Rapid breathing</label>
-      </div>
-      <button onclick="checkDisease('Dengue')">Check for Dengue Symptoms</button>
-      <div class="symptom-result" id="symptomResult"></div>
-      <div style="text-align:center;margin-top:8px;"><button onclick="submitDiseaseReport()">Submit Disease Report</button></div>
-      `;
-  } else if(disease==="lepto"){
-    html=`
-      <h3>Leptospirosis Symptom Checker</h3>
-      <div class="symptom-group">
-        <strong>Common Symptoms:</strong>
-        <label><input type="checkbox" class="symptom" value="fever"> Sudden fever</label>
-        <label><input type="checkbox" class="symptom" value="headache"> Headache</label>
-        <label><input type="checkbox" class="symptom" value="chills"> Chills</label>
-        <label><input type="checkbox" class="symptom" value="muscle aches"> Muscle aches (calves and back)</label>
-        <label><input type="checkbox" class="symptom" value="cough"> Cough</label>
-        <label><input type="checkbox" class="symptom" value="red eyes"> Red eyes</label>
-        <label><input type="checkbox" class="symptom" value="rash"> Rash</label>
-      </div>
-      <div class="symptom-group">
-        <strong>Severe Symptoms:</strong>
-        <label><input type="checkbox" class="symptom severe" value="jaundice"> Jaundice (yellow skin/eyes)</label>
-        <label><input type="checkbox" class="symptom severe" value="kidney damage"> Kidney damage</label>
-        <label><input type="checkbox" class="symptom severe" value="meningitis"> Meningitis</label>
-      </div>
-      <button onclick="checkDisease('Leptospirosis')">Check for Leptospirosis Symptoms</button>
-      <div class="symptom-result" id="symptomResult"></div>
-      <div style="text-align:center;margin-top:8px;"><button onclick="submitDiseaseReport()">Submit Disease Report</button></div>
-      `;
-  } else if(disease==="malaria"){
-    html=`
-      <h3>Malaria Symptom Checker</h3>
-      <div class="symptom-group">
-        <strong>Common Symptoms:</strong>
-        <label><input type="checkbox" class="symptom" value="fever"> Fever</label>
-        <label><input type="checkbox" class="symptom" value="chills"> Chills</label>
-        <label><input type="checkbox" class="symptom" value="sweating"> Sweating</label>
-        <label><input type="checkbox" class="symptom" value="headache"> Headache</label>
-        <label><input type="checkbox" class="symptom" value="nausea"> Nausea or vomiting</label>
-        <label><input type="checkbox" class="symptom" value="body aches"> Body aches</label>
-      </div>
-      <div class="symptom-group">
-        <strong>Severe Symptoms:</strong>
-        <label><input type="checkbox" class="symptom severe" value="confusion"> Confusion</label>
-        <label><input type="checkbox" class="symptom severe" value="seizures"> Seizures</label>
-        <label><input type="checkbox" class="symptom severe" value="difficulty breathing"> Difficulty breathing</label>
-        <label><input type="checkbox" class="symptom severe" value="jaundice"> Jaundice</label>
-      </div>
-      <button onclick="checkDisease('Malaria')">Check for Malaria Symptoms</button>
-      <div class="symptom-result" id="symptomResult"></div>
-      <div style="text-align:center;margin-top:8px;"><button onclick="submitDiseaseReport()">Submit Disease Report</button></div>
-      `;
-  }
-  sc.innerHTML = html;
-}
-updateSymptomChecker();
 
-function checkDisease(disease){
-  const checked = document.querySelectorAll("#symptomChecker .symptom:checked");
-  const severe = document.querySelectorAll("#symptomChecker .symptom.severe:checked");
-  const res = document.getElementById("symptomResult");
-  if(checked.length===0){
-    res.textContent="Please select your symptoms first.";
-    res.style.color="#d32f2f";return;
-  }
-  if(severe.length>0){
-    res.textContent=`Your symptoms indicate possible SEVERE ${disease}. Seek medical attention immediately.`;
-    res.style.color="#d32f2f";
-  } else if(checked.length>=3){
-    res.textContent=`Your symptoms match moderate signs of ${disease}. Monitor closely and consult a doctor.`;
-    res.style.color="#f57c00";
-  } else {
-    res.textContent=`Your symptoms are mild. Continue to rest and observe.`;
-    res.style.color="#198754";
-  }
-}
+      <button onclick="toggleMap()">View NCR Disease Heat Map</button>
+      <div style="margin-top:12px;" id="authButtons">
+        <button onclick="logout()" style="background:#dc3545;">Log out</button>
+      </div>
+    </main>
+  </div>
 
-/* ======= REPORT STORAGE + RENDERING (ADDED) ======= */
-function loadReports(){
-  try { return JSON.parse(localStorage.getItem('diseaseReports')||'[]'); } catch { return []; }
-}
-function saveReports(reports){
-  localStorage.setItem('diseaseReports', JSON.stringify(reports));
-}
-function renderReports(){
-  const tbody = document.querySelector("#reportTable tbody");
-  const reports = loadReports();
-  tbody.innerHTML = "";
-  if(!reports || reports.length === 0){
-    // show empty row to keep table visible
-    const tr = document.createElement("tr");
-    tr.innerHTML = `<td colspan="3" style="color:#6b6b6b;">No reports yet</td>`;
-    tbody.appendChild(tr);
-    return;
-  }
-  reports.forEach(r=>{
-    const tr = document.createElement("tr");
-    tr.innerHTML = `<td>${escapeHtml(r.disease)}</td><td>${escapeHtml(r.location)}</td><td>${escapeHtml(r.date)}</td>`;
-    tbody.appendChild(tr);
-  });
-}
-// basic escape to avoid accidental HTML injection from saved strings
-function escapeHtml(text){
-  if(!text && text !== 0) return "";
-  return text.toString().replace(/[&<>"']/g, function(m){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"})[m]; });
-}
+  <!-- MAP -->
+  <div id="mapContainer">
+    <button id="backBtn" onclick="toggleMap()">⮜</button>
+    <div id="map"></div>
 
-function submitDiseaseReport(){
-  // Use currently selected disease and the location input
-  const disease = document.getElementById("disease").value;
-  const locInput = document.getElementById("location");
-  let location = locInput ? locInput.value.trim() : "";
-  if(!location){
-    // if empty, ask user to enter location (do not change existing layout)
-    const p = prompt("Please enter the location for the report (e.g., Barangay, City):");
-    if(p === null) return; // user cancelled
-    location = p.trim();
-  }
-  if(!location){
-    alert("Location is required to submit a report.");
-    return;
-  }
-  const reports = loadReports();
-  reports.push({ disease, location, date: new Date().toLocaleString() });
-  saveReports(reports);
-  alert("Report submitted successfully!");
-  renderReports();
-}
+    <!-- Map Controls -->
+    <div id="mapControls"
+      style="position: absolute; top: 20px; right: 20px; z-index: 1000; background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+      <div style="margin-bottom: 0.5rem;">
+        <label style="display: block; font-weight: 600; color: #0f5132; margin-bottom: 0.3rem;">Filter by
+          Disease:</label>
+        <select id="diseaseFilter" onchange="filterMapByDisease()"
+          style="width: 100%; padding: 0.5rem; border-radius: 4px; border: 1px solid #cde3d6;">
+          <option value="">All Diseases</option>
+          <option value="dengue">Dengue</option>
+          <option value="leptospirosis">Leptospirosis</option>
+          <option value="malaria">Malaria</option>
+        </select>
+      </div>
+      <div style="margin-bottom: 0.5rem;">
+        <label style="display: block; font-weight: 600; color: #0f5132; margin-bottom: 0.3rem;">Time Range:</label>
+        <select id="daysFilter" onchange="filterMapByDays()"
+          style="width: 100%; padding: 0.5rem; border-radius: 4px; border: 1px solid #cde3d6;">
+          <option value="30">Last 30 days</option>
+          <option value="90" selected>Last 90 days</option>
+          <option value="180">Last 6 months</option>
+          <option value="365">Last year</option>
+        </select>
+      </div>
+      <button onclick="refreshMapData()"
+        style="width: 100%; padding: 0.5rem; background-color: #198754; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 600;">
+        🔄 Refresh Data
+      </button>
+    </div>
 
-/* ======= MAP ======= */
-let map;
-function toggleMap(){
-  const c=document.getElementById("mapContainer");
-  const s=document.getElementById("sideLegend");
-  if(c.style.display==="block"){c.style.display="none";s.style.display="none";return;}
-  c.style.display="block";s.style.display="flex";
-  if(!map){
-    map=L.map("map").setView([14.6091,121.0223],11);
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
-    L.Control.geocoder().addTo(map);
-  }
-}
-document.querySelector("#sideLegend .arrow").addEventListener("click",()=>{document.getElementById("sideLegend").classList.toggle("expanded");});
+    <div id="sideLegend">
+      <div class="arrow">&#9664;</div>
+      <div class="side-colors">
+        <div><span class="color-box red"></span><span class="label">Dengue</span></div>
+        <div><span class="color-box orange"></span><span class="label">Lepto</span></div>
+        <div><span class="color-box yellow"></span><span class="label">Malaria</span></div>
+      </div>
+    </div>
+  </div>
 
-// render reports on load so table is always visible
-renderReports();
-</script>
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+  <script src="js/notifications.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/reports.js"></script>
+  <script src="js/map.js"></script>
+  <script>
+    function toggleVisibility(id, btn) {
+      const f = document.getElementById(id);
+      f.type = f.type === "password" ? "text" : "password";
+      btn.textContent = f.type === "password" ? "👁️" : "🙈";
+    }
+
+    function showSignup() {
+      loginForm.style.display = "none";
+      signupForm.style.display = "block";
+    }
+
+    function showLogin() {
+      signupForm.style.display = "none";
+      loginForm.style.display = "block";
+    }
+
+    async function handleSignup(e) {
+      e.preventDefault();
+      const username = signupUsername.value.trim();
+      const email = signupEmail.value.trim();
+      const pass = password.value;
+      const confirm = confirmPassword.value;
+
+      if (pass !== confirm) {
+        notify.error("Passwords do not match.");
+        return;
+      }
+      if (pass.length < 8) {
+        notify.error("Password must be at least 8 characters.");
+        return;
+      }
+
+      try {
+        const result = await authManager.register({ username, email, password: pass });
+        notify.success("Account created! Please log in.");
+        // Reset the form element inside signupForm div
+        document.querySelector('#signupForm form').reset();
+        showLogin();
+      } catch (error) {
+        notify.error(error.message || "Registration failed. Please try again.");
+      }
+    }
+
+    async function handleLogin(e) {
+      e.preventDefault();
+      const username = loginUsername.value.trim();
+      const pass = loginPassword.value;
+
+      try {
+        const result = await authManager.login({ username, password: pass });
+        notify.success("Login successful!");
+        openMain(result.user);
+      } catch (error) {
+        notify.error(error.message || "Invalid credentials.");
+      }
+    }
+
+    function continueAsGuest() {
+      openMain({ username: "Guest", isGuest: true });
+    }
+
+    async function openMain(user) {
+      formContainer.style.display = "none";
+      mainPage.style.display = "block";
+
+      const isGuest = user.isGuest === true;
+      const symptomSection = document.getElementById("symptomChecker");
+      const locationLabel = document.querySelector('label');
+      const locationInput = document.getElementById("location");
+      const reportSection = document.getElementById("reportSection");
+
+      if (isGuest) {
+        if (symptomSection) symptomSection.style.display = "none";
+        if (locationLabel) locationLabel.style.display = "none";
+        if (locationInput) locationInput.style.display = "none";
+        if (reportSection) reportSection.style.display = "none";
+        document.getElementById("disease").parentElement.querySelector("label").style.display = "none";
+        document.getElementById("disease").style.display = "none";
+
+        const main = document.querySelector("main");
+        const guestMsg = document.createElement("p");
+        guestMsg.id = "guestMessage";
+        guestMsg.style.cssText = "background:#fff3cd;padding:10px;border-radius:8px;color:#856404;text-align:center;";
+        guestMsg.textContent = "You are viewing as a guest. Log in to submit disease reports.";
+        main.insertBefore(guestMsg, main.firstChild);
+      } else {
+        if (symptomSection) symptomSection.style.display = "block";
+        if (locationLabel) locationLabel.style.display = "block";
+        if (locationInput) locationInput.style.display = "block";
+        if (reportSection) reportSection.style.display = "block";
+        document.getElementById("disease").parentElement.querySelector("label").style.display = "block";
+        document.getElementById("disease").style.display = "block";
+
+        const guestMsg = document.getElementById("guestMessage");
+        if (guestMsg) guestMsg.remove();
+
+        await renderReports();
+      }
+    }
+
+    async function logout() {
+      try {
+        await authManager.logout();
+      } catch (error) {
+        console.error("Logout error:", error);
+      }
+      mainPage.style.display = "none";
+      formContainer.style.display = "block";
+      showLogin();
+    }
+
+    window.addEventListener('DOMContentLoaded', async () => {
+      const session = await authManager.checkSession();
+      if (session.authenticated) {
+        openMain(session.user);
+        await renderReports();
+      }
+    });
+
+    setInterval(async () => {
+      if (authManager.isAuthenticated()) {
+        const session = await authManager.checkSession();
+        if (!session.authenticated) {
+          notify.warning("Your session has expired. Please log in again.");
+          await logout();
+        }
+      }
+    }, 300000);
+
+    window.addEventListener('unhandledrejection', (event) => {
+      console.error('Unhandled promise rejection:', event.reason);
+      if (event.reason && event.reason.message) {
+        notify.error('An error occurred: ' + event.reason.message);
+      }
+    });
+
+    const appLogger = {
+      log: (message, data) => {
+        if (console && console.log) {
+          console.log(`[Disease Tracker] ${message}`, data || '');
+        }
+      },
+      error: (message, error) => {
+        if (console && console.error) {
+          console.error(`[Disease Tracker ERROR] ${message}`, error || '');
+        }
+      },
+      warn: (message, data) => {
+        if (console && console.warn) {
+          console.warn(`[Disease Tracker WARNING] ${message}`, data || '');
+        }
+      }
+    };
+
+    appLogger.log('Application loaded', { timestamp: new Date().toISOString() });
+
+    /* ======= SYMPTOM CHECKERS ======= */
+    function updateSymptomChecker() {
+      const disease = document.getElementById("disease").value;
+      const sc = document.getElementById("symptomChecker");
+      let html = "";
+      if (disease === "dengue") {
+        html = `
+    <h3>Dengue Symptom Checker</h3>
+    <div class="symptom-group">
+      <strong>Common Symptoms:</strong>
+      <label><input type="checkbox" class="symptom" value="fever"> High fever (40°C / 104°F)</label>
+      <label><input type="checkbox" class="symptom" value="headache"> Severe headache (pain behind eyes)</label>
+      <label><input type="checkbox" class="symptom" value="body aches"> Muscle, joint, or bone pain</label>
+      <label><input type="checkbox" class="symptom" value="rash"> Skin rash</label>
+      <label><input type="checkbox" class="symptom" value="nausea"> Nausea or vomiting</label>
+      <label><input type="checkbox" class="symptom" value="swollen glands"> Swollen glands</label>
+    </div>
+    <div class="symptom-group">
+      <strong>Severe Symptoms:</strong>
+      <label><input type="checkbox" class="symptom severe" value="fatigue"> Fatigue / restlessness</label>
+      <label><input type="checkbox" class="symptom severe" value="bleeding"> Bleeding gums / nosebleeds</label>
+      <label><input type="checkbox" class="symptom severe" value="abdominal pain"> Severe abdominal pain</label>
+      <label><input type="checkbox" class="symptom severe" value="vomiting blood"> Vomiting blood / blood in
+        stool</label>
+      <label><input type="checkbox" class="symptom severe" value="rapid breathing"> Rapid breathing</label>
+    </div>
+    <button onclick="checkDisease('Dengue')">Check for Dengue Symptoms</button>
+    <div class="symptom-result" id="symptomResult"></div>
+    <div style="text-align:center;margin-top:8px;"><button onclick="submitDiseaseReport()">Submit Disease
+        Report</button></div>
+    `;
+      } else if (disease === "lepto") {
+        html = `
+    <h3>Leptospirosis Symptom Checker</h3>
+    <div class="symptom-group">
+      <strong>Common Symptoms:</strong>
+      <label><input type="checkbox" class="symptom" value="fever"> Sudden fever</label>
+      <label><input type="checkbox" class="symptom" value="headache"> Headache</label>
+      <label><input type="checkbox" class="symptom" value="chills"> Chills</label>
+      <label><input type="checkbox" class="symptom" value="muscle aches"> Muscle aches (calves and back)</label>
+      <label><input type="checkbox" class="symptom" value="cough"> Cough</label>
+      <label><input type="checkbox" class="symptom" value="red eyes"> Red eyes</label>
+      <label><input type="checkbox" class="symptom" value="rash"> Rash</label>
+    </div>
+    <div class="symptom-group">
+      <strong>Severe Symptoms:</strong>
+      <label><input type="checkbox" class="symptom severe" value="jaundice"> Jaundice (yellow skin/eyes)</label>
+      <label><input type="checkbox" class="symptom severe" value="kidney damage"> Kidney damage</label>
+      <label><input type="checkbox" class="symptom severe" value="meningitis"> Meningitis</label>
+    </div>
+    <button onclick="checkDisease('Leptospirosis')">Check for Leptospirosis Symptoms</button>
+    <div class="symptom-result" id="symptomResult"></div>
+    <div style="text-align:center;margin-top:8px;"><button onclick="submitDiseaseReport()">Submit Disease
+        Report</button></div>
+    `;
+      } else if (disease === "malaria") {
+        html = `
+    <h3>Malaria Symptom Checker</h3>
+    <div class="symptom-group">
+      <strong>Common Symptoms:</strong>
+      <label><input type="checkbox" class="symptom" value="fever"> Fever</label>
+      <label><input type="checkbox" class="symptom" value="chills"> Chills</label>
+      <label><input type="checkbox" class="symptom" value="sweating"> Sweating</label>
+      <label><input type="checkbox" class="symptom" value="headache"> Headache</label>
+      <label><input type="checkbox" class="symptom" value="nausea"> Nausea or vomiting</label>
+      <label><input type="checkbox" class="symptom" value="body aches"> Body aches</label>
+    </div>
+    <div class="symptom-group">
+      <strong>Severe Symptoms:</strong>
+      <label><input type="checkbox" class="symptom severe" value="confusion"> Confusion</label>
+      <label><input type="checkbox" class="symptom severe" value="seizures"> Seizures</label>
+      <label><input type="checkbox" class="symptom severe" value="difficulty breathing"> Difficulty breathing</label>
+      <label><input type="checkbox" class="symptom severe" value="jaundice"> Jaundice</label>
+    </div>
+    <button onclick="checkDisease('Malaria')">Check for Malaria Symptoms</button>
+    <div class="symptom-result" id="symptomResult"></div>
+    <div style="text-align:center;margin-top:8px;"><button onclick="submitDiseaseReport()">Submit Disease
+        Report</button></div>
+    `;
+      }
+      sc.innerHTML = html;
+    }
+    updateSymptomChecker();
+
+    function checkDisease(disease) {
+      const checked = document.querySelectorAll("#symptomChecker .symptom:checked");
+      const severe = document.querySelectorAll("#symptomChecker .symptom.severe:checked");
+      const res = document.getElementById("symptomResult");
+      if (checked.length === 0) {
+        res.textContent = "Please select your symptoms first.";
+        res.style.color = "#d32f2f"; return;
+      }
+      if (severe.length > 0) {
+        res.textContent = `Your symptoms indicate possible SEVERE ${disease}. Seek medical attention immediately.`;
+        res.style.color = "#d32f2f";
+      } else if (checked.length >= 3) {
+        res.textContent = `Your symptoms match moderate signs of ${disease}. Monitor closely and consult a doctor.`;
+        res.style.color = "#f57c00";
+      } else {
+        res.textContent = `Your symptoms are mild. Continue to rest and observe.`;
+        res.style.color = "#198754";
+      }
+    }
+
+    /* ======= REPORT SUBMISSION AND RENDERING ======= */
+    async function renderReports() {
+      // Check if user is authenticated
+      if (authManager.isAuthenticated()) {
+        const user = authManager.getCurrentUser();
+        const reports = await reportManager.getUserReports(user.id);
+        reportManager.renderReportTable(reports);
+      } else {
+        // Guest user - show empty table
+        reportManager.renderReportTable([]);
+      }
+    }
+
+    async function submitDiseaseReport() {
+      // Check if user is authenticated
+      if (!authManager.isAuthenticated()) {
+        notify.warning("Please log in to submit a disease report.");
+        return;
+      }
+
+      // Get disease type - map "lepto" to "leptospirosis"
+      let disease = document.getElementById("disease").value;
+      if (disease === "lepto") disease = "leptospirosis";
+
+      const locInput = document.getElementById("location");
+      let location = locInput ? locInput.value.trim() : "";
+
+      if (!location) {
+        const p = prompt("Please enter the location for the report (e.g., Barangay, City):");
+        if (p === null) return;
+        location = p.trim();
+      }
+
+      if (!location) {
+        notify.error("Location is required to submit a report.");
+        return;
+      }
+
+      try {
+        // Show loading state
+        const btn = event.target;
+        btn.disabled = true;
+        btn.textContent = "Submitting...";
+
+        const result = await reportManager.submitReport({
+          disease_type: disease,
+          address: location
+        });
+
+        notify.success("Report submitted successfully!");
+
+        // Clear location input
+        if (locInput) locInput.value = "";
+
+        // Refresh reports table
+        await renderReports();
+
+        btn.disabled = false;
+        btn.textContent = "Submit Disease Report";
+
+      } catch (error) {
+        notify.error(error.message || "Failed to submit report. Please try again.");
+        const btn = event.target;
+        btn.disabled = false;
+        btn.textContent = "Submit Disease Report";
+      }
+    }
+
+    /* ======= MAP ======= */
+    let currentMapFilters = { days: 90, disease_type: null };
+
+    async function toggleMap() {
+      const c = document.getElementById("mapContainer");
+      const s = document.getElementById("sideLegend");
+
+      if (c.style.display === "block") {
+        c.style.display = "none";
+        s.style.display = "none";
+        return;
+      }
+
+      c.style.display = "block";
+      s.style.display = "flex";
+
+      // Initialize map if not already done
+      mapManager.initMap();
+
+      // Load and render heat map data with current filters
+      await loadMapWithFilters();
+    }
+
+    async function loadMapWithFilters() {
+      try {
+        const filters = {};
+        if (currentMapFilters.days) filters.days = currentMapFilters.days;
+        if (currentMapFilters.disease_type) filters.disease_type = currentMapFilters.disease_type;
+
+        const data = await mapManager.loadHeatMapData(filters);
+        mapManager.renderHeatMap(data);
+
+        notify.info(`Showing ${data.length} case(s)`);
+      } catch (error) {
+        notify.error("Failed to load map data");
+      }
+    }
+
+    async function filterMapByDisease() {
+      const diseaseFilter = document.getElementById("diseaseFilter");
+      currentMapFilters.disease_type = diseaseFilter.value || null;
+      await loadMapWithFilters();
+    }
+
+    async function filterMapByDays() {
+      const daysFilter = document.getElementById("daysFilter");
+      currentMapFilters.days = parseInt(daysFilter.value);
+      await loadMapWithFilters();
+    }
+
+    async function refreshMapData() {
+      notify.info("Refreshing map data...");
+      await loadMapWithFilters();
+      notify.success("Map data refreshed!");
+    }
+
+    document.querySelector("#sideLegend .arrow").addEventListener("click", () => {
+      document.getElementById("sideLegend").classList.toggle("expanded");
+    });
+  </script>
 </body>
+
 </html>
