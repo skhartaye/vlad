@@ -1,11 +1,11 @@
 <?php
 // Database configuration
-// Use environment variables if available (for Vercel/production), otherwise use defaults (for local)
-define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
-define('DB_NAME', getenv('DB_NAME') ?: 'disease_tracker');
-define('DB_USER', getenv('DB_USER') ?: 'root');
-define('DB_PASS', getenv('DB_PASS') ?: '');
-define('DB_PORT', getenv('DB_PORT') ?: 3306);
+// Use environment variables if available (for Vercel/production), otherwise use Wasmer defaults
+define('DB_HOST', getenv('DB_HOST') ?: 'db.fr-pari1.bengt.wasmernet.com:10272');
+define('DB_NAME', getenv('DB_NAME') ?: 'db_dengue');
+define('DB_USER', getenv('DB_USER') ?: 'c545581b7516800070e930ad2164');
+define('DB_PASS', getenv('DB_PASS') ?: '0690c545-581b-767f-8000-8a9f555c671e');
+define('DB_PORT', getenv('DB_PORT') ?: 10272);
 define('DB_CHARSET', 'utf8mb4');
 
 // Application configuration
