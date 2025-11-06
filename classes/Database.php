@@ -1,14 +1,14 @@
 <?php
 /**
- * Database Connection Class
- * Handles PDO connection to MySQL database
+ * Database Connection Class for PostgreSQL (Neon)
+ * Handles PDO connection to PostgreSQL database
  */
 class Database {
     private $host;
     private $db_name;
     private $username;
     private $password;
-    private $charset;
+    private $port;
     private $conn;
 
     /**
@@ -19,7 +19,7 @@ class Database {
         $this->db_name = DB_NAME;
         $this->username = DB_USER;
         $this->password = DB_PASS;
-        $this->charset = DB_CHARSET;
+        $this->port = defined('DB_PORT') ? DB_PORT : 5432;
     }
 
     /**
@@ -30,23 +30,17 @@ class Database {
         $this->conn = null;
 
         try {
-            $dsn = "mysql:host=" . $this->host . ";dbname=" . $this->db_name . ";charset=" . $this->charset;
+            // PostgreSQL DSN format
+            $dsn = "pgsql:host=" . $this->host . 
+                   ";port=" . $this->port . 
+                   ";dbname=" . $this->db_name . 
+                   ";sslmode=require"; // Neon requires SSL
             
             $options = [
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-                PDO::ATTR_EMULATE_PREPARES => false,
-                PDO::ATTR_TIMEOUT => 10,
-                PDO::ATTR_PERSISTENT => false
+                PDO::ATTR_EMULATE_PREPARES => false
             ];
-            
-            // Add MySQL-specific options if available
-            if (defined('PDO::MYSQL_ATTR_INIT_COMMAND')) {
-                $options[PDO::MYSQL_ATTR_INIT_COMMAND] = "SET NAMES " . $this->charset;
-            }
-            if (defined('PDO::MYSQL_ATTR_CONNECT_TIMEOUT')) {
-                $options[PDO::MYSQL_ATTR_CONNECT_TIMEOUT] = 10;
-            }
 
             $this->conn = new PDO($dsn, $this->username, $this->password, $options);
             
