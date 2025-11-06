@@ -1,14 +1,14 @@
 <?php
 /**
- * Database Connection Class for PostgreSQL (Neon)
- * Handles PDO connection to PostgreSQL database
+ * Database Connection Class
+ * Handles PDO connection to MySQL database
  */
 class Database {
     private $host;
     private $db_name;
     private $username;
     private $password;
-    private $port;
+    private $charset;
     private $conn;
 
     /**
@@ -19,7 +19,7 @@ class Database {
         $this->db_name = DB_NAME;
         $this->username = DB_USER;
         $this->password = DB_PASS;
-        $this->port = defined('DB_PORT') ? DB_PORT : 5432;
+        $this->charset = defined('DB_CHARSET') ? DB_CHARSET : 'utf8mb4';
     }
 
     /**
@@ -30,11 +30,7 @@ class Database {
         $this->conn = null;
 
         try {
-            // PostgreSQL DSN format
-            $dsn = "pgsql:host=" . $this->host . 
-                   ";port=" . $this->port . 
-                   ";dbname=" . $this->db_name . 
-                   ";sslmode=disable"; // Wasmer doesn't use SSL
+            $dsn = "mysql:host=" . $this->host . ";dbname=" . $this->db_name . ";charset=" . $this->charset;
             
             $options = [
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -47,7 +43,7 @@ class Database {
         } catch(PDOException $e) {
             error_log("Database Connection Error: " . $e->getMessage());
             
-            if (ENVIRONMENT === 'development') {
+            if (defined('ENVIRONMENT') && ENVIRONMENT === 'development') {
                 echo json_encode([
                     'success' => false,
                     'message' => 'Database connection failed: ' . $e->getMessage()
