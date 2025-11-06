@@ -1,9 +1,9 @@
 <?php
-// Database configuration - MySQL
-define('DB_HOST', getenv('DB_HOST') ?: 'sql113.infinityfree.com');
-define('DB_NAME', getenv('DB_NAME') ?: 'if0_40351049_db_dengue');
+// Database configuration - InfinityFree MySQL
+define('DB_HOST', getenv('DB_HOST') ?: 'sql102.infinityfree.com');
+define('DB_NAME', getenv('DB_NAME') ?: 'if0_40351049_disease_tracker');
 define('DB_USER', getenv('DB_USER') ?: 'if0_40351049');
-define('DB_PASS', getenv('DB_PASS') ?: 'your_password_here');
+define('DB_PASS', getenv('DB_PASS') ?: 'WD3g0IV0Pji');
 define('DB_CHARSET', 'utf8mb4');
 
 // Application configuration
