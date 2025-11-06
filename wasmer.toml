@@ -1,23 +1,18 @@
 [package]
-name = "disease-tracker"
+name = "diseasetracker"
 version = "1.0.0"
 description = "Disease Heat Map Tracker"
 
 [dependencies]
-"php/php" = "8.2"
-
-[[module]]
-name = "php"
-source = "php/php@8.2"
-abi = "wasi"
+"php/php" = "latest"
 
 [fs]
 "/app" = "."
 
 [[command]]
-name = "serve"
-module = "php"
-runner = "https://webc.org/runner/wasi"
+name = "script"
+module = "php/php:php"
+runner = "wasi"
 
 [command.annotations.wasi]
 env = ["DOCUMENT_ROOT=/app"]
