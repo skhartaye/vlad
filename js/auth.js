@@ -23,7 +23,15 @@ class AuthManager {
                 body: JSON.stringify(userData)
             });
 
-            const data = await response.json();
+            const text = await response.text();
+            let data;
+            
+            try {
+                data = JSON.parse(text);
+            } catch (e) {
+                console.error('Invalid JSON response:', text);
+                throw new Error('Server returned invalid response');
+            }
             
             if (!response.ok) {
                 throw new Error(data.message || 'Registration failed');
@@ -52,7 +60,15 @@ class AuthManager {
                 body: JSON.stringify(credentials)
             });
 
-            const data = await response.json();
+            const text = await response.text();
+            let data;
+            
+            try {
+                data = JSON.parse(text);
+            } catch (e) {
+                console.error('Invalid JSON response:', text);
+                throw new Error('Server returned invalid response');
+            }
             
             if (!response.ok) {
                 throw new Error(data.message || 'Login failed');
@@ -108,7 +124,19 @@ class AuthManager {
                 }
             });
 
-            const data = await response.json();
+            // Check if response is ok and has content
+            if (!response.ok) {
+                this.currentUser = null;
+                return { authenticated: false };
+            }
+
+            const text = await response.text();
+            if (!text) {
+                this.currentUser = null;
+                return { authenticated: false };
+            }
+
+            const data = JSON.parse(text);
             
             if (data.authenticated && data.user) {
                 this.currentUser = data.user;
