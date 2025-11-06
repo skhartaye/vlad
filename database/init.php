@@ -14,14 +14,14 @@ $password = DB_PASS;
 $dbname = DB_NAME;
 
 try {
-    // Connect to MySQL server (without database)
-    $conn = new PDO("mysql:host=$host", $username, $password);
+    // Connect to MySQL database (database should already exist)
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
-    echo "Connected to MySQL server successfully.<br>";
+    echo "Connected to database successfully.<br>";
     
-    // Read and execute schema.sql
-    $sql = file_get_contents(__DIR__ . '/schema.sql');
+    // Read and execute schema-no-create-db.sql (without CREATE DATABASE)
+    $sql = file_get_contents(__DIR__ . '/schema-no-create-db.sql');
     
     if ($sql === false) {
         throw new Exception("Could not read schema.sql file");
