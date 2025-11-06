@@ -1,14 +1,16 @@
 <?php
 // Database configuration
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'disease_tracker');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+// Use environment variables if available (for Vercel/production), otherwise use defaults (for local)
+define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
+define('DB_NAME', getenv('DB_NAME') ?: 'disease_tracker');
+define('DB_USER', getenv('DB_USER') ?: 'root');
+define('DB_PASS', getenv('DB_PASS') ?: '');
+define('DB_PORT', getenv('DB_PORT') ?: 3306);
 define('DB_CHARSET', 'utf8mb4');
 
 // Application configuration
-define('BASE_URL', 'http://localhost/disease-tracker/');
-define('ENVIRONMENT', 'development'); // 'development' or 'production'
+define('BASE_URL', getenv('BASE_URL') ?: 'http://localhost/disease-tracker/');
+define('ENVIRONMENT', getenv('ENVIRONMENT') ?: 'development'); // 'development' or 'production'
 
 // Session configuration
 ini_set('session.cookie_httponly', 1);
