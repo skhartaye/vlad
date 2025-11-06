@@ -34,7 +34,7 @@ class Database {
             $dsn = "pgsql:host=" . $this->host . 
                    ";port=" . $this->port . 
                    ";dbname=" . $this->db_name . 
-                   ";sslmode=require"; // Neon requires SSL
+                   ";sslmode=disable"; // Wasmer doesn't use SSL
             
             $options = [
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,

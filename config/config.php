@@ -8,7 +8,7 @@ define('DB_PASS', getenv('DB_PASS') ?: '0690c545-581b-767f-8000-8a9f555c671e');
 define('DB_PORT', getenv('DB_PORT') ?: 10272);
 
 // Application configuration
-define('BASE_URL', getenv('BASE_URL') ?: 'http://localhost/disease-tracker/');
+define('BASE_URL', getenv('BASE_URL') ?: 'https://diseasetracker.wasmer.app//');
 define('ENVIRONMENT', getenv('ENVIRONMENT') ?: 'development'); // 'development' or 'production'
 
 // Session configuration
